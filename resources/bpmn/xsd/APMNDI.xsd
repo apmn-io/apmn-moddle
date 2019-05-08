@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:apmndi="http://apmn.io/spec/APMN/DI" xmlns:dc="http://apmn.io/spec/DD/DC" xmlns:di="http://apmn.io/spec/DD/DI" targetNamespace="http://apmn.io/spec/APMN/DI"  elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+	<xsd:import namespace="http://apmn.io/spec/DD/DC" schemaLocation="DC.xsd" />
+	<xsd:import namespace="http://apmn.io/spec/DD/DI" schemaLocation="DI.xsd" />
+
+	<xsd:element name="APMNDiagram" type="apmndi:APMNDiagram" />
+	<xsd:element name="APMNPlane" type="apmndi:APMNPlane" />
+	<xsd:element name="APMNLabelStyle" type="apmndi:APMNLabelStyle" />
+	<xsd:element name="APMNShape" type="apmndi:APMNShape" substitutionGroup="di:DiagramElement" />
+	<xsd:element name="APMNLabel" type="apmndi:APMNLabel" />
+	<xsd:element name="APMNEdge" type="apmndi:APMNEdge" substitutionGroup="di:DiagramElement" />
+
+	<xsd:complexType name="APMNDiagram">
+		<xsd:complexContent>
+			<xsd:extension base="di:Diagram">
+				<xsd:sequence>
+					<xsd:element ref="apmndi:APMNPlane" />
+					<xsd:element ref="apmndi:APMNLabelStyle" maxOccurs="unbounded" minOccurs="0" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="APMNPlane">
+		<xsd:complexContent>
+			<xsd:extension base="di:Plane">
+				<xsd:attribute name="apmnElement" type="xsd:QName" />
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="APMNEdge">
+		<xsd:complexContent>
+			<xsd:extension base="di:LabeledEdge">
+				<xsd:sequence>
+					<xsd:element ref="apmndi:APMNLabel" minOccurs="0" />
+				</xsd:sequence>
+				<xsd:attribute name="apmnElement" type="xsd:QName" />
+				<xsd:attribute name="sourceElement" type="xsd:QName" />
+				<xsd:attribute name="targetElement" type="xsd:QName" />
+				<xsd:attribute name="messageVisibleKind" type="apmndi:MessageVisibleKind" />
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="APMNShape">
+		<xsd:complexContent>
+			<xsd:extension base="di:LabeledShape">
+				<xsd:sequence>
+					<xsd:element ref="apmndi:APMNLabel" minOccurs="0" />
+				</xsd:sequence>
+				<xsd:attribute name="apmnElement" type="xsd:QName" />
+				<xsd:attribute name="isHorizontal" type="xsd:boolean" />
+				<xsd:attribute name="isExpanded" type="xsd:boolean" />
+				<xsd:attribute name="isMarkerVisible" type="xsd:boolean" />
+				<xsd:attribute name="isMessageVisible" type="xsd:boolean" />
+				<xsd:attribute name="participantBandKind" type="apmndi:ParticipantBandKind" />
+				<xsd:attribute name="choreographyActivityShape" type="xsd:QName"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="APMNLabel">
+		<xsd:complexContent>
+			<xsd:extension base="di:Label">
+				<xsd:attribute name="labelStyle" type="xsd:QName" />
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="APMNLabelStyle">
+		<xsd:complexContent>
+			<xsd:extension base="di:Style">
+				<xsd:sequence>
+					<xsd:element ref="dc:Font" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:simpleType name="ParticipantBandKind">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="top_initiating" />
+			<xsd:enumeration value="middle_initiating" />
+			<xsd:enumeration value="bottom_initiating" />
+			<xsd:enumeration value="top_non_initiating" />
+			<xsd:enumeration value="middle_non_initiating" />
+			<xsd:enumeration value="bottom_non_initiating" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="MessageVisibleKind">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="initiating" />
+			<xsd:enumeration value="non_initiating" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+</xsd:schema>

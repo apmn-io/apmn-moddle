@@ -1,30 +1,28 @@
 > As of version `5.0.0` this library exposes [ES modules](http://exploringjs.com/es6/ch_modules.html#sec_basics-of-es6-modules). Use [esm](https://github.com/standard-things/esm) to consume it or an ES module aware bundler such as [Webpack](https://webpack.js.org) or [Rollup](https://rollupjs.org) to bundle it for the browser.
 
 
-# bpmn-moddle
+# apmn-moddle
 
-[![Build Status](https://travis-ci.org/bpmn-io/bpmn-moddle.svg?branch=master)](https://travis-ci.org/bpmn-io/bpmn-moddle)
+Read and write APMN diagram files in NodeJS and the browser.
 
-Read and write BPMN 2.0 diagram files in NodeJS and the browser.
-
-__bpmn-moddle__ uses the [BPMN 2.0 meta-model](http://www.omg.org/spec/BPMN/2.0/) to validate the input and produce correct BPMN 2.0 XML. The library is built on top of [moddle](https://github.com/bpmn-io/moddle) and [moddle-xml](https://github.com/bpmn-io/moddle-xml).
+__apmn-moddle__ uses the [APMN meta-model](http://apmn.io/spec/APMN/) to validate the input and produce correct APMN XML. The library is built on top of [moddle](https://github.com/bpmn-io/moddle) and [moddle-xml](https://github.com/bpmn-io/moddle-xml).
 
 
 ## Usage
 
-Get the library via [npm package](https://www.npmjs.org/package/bpmn-moddle). Bundle it for the web using [browserify](http://browserify.org) or [webpack](https://webpack.github.io).
+Get the library via [npm package](https://www.npmjs.org/package/apmn-moddle). Bundle it for the web using [webpack](https://webpack.github.io).
 
 ```javascript
-import BpmnModdle from 'bpmn-moddle';
+import ApmnModdle from 'apmn-moddle';
 
-var moddle = new BpmnModdle();
+var moddle = new ApmnModdle();
 
 var xmlStr =
   '<?xml version="1.0" encoding="UTF-8"?>' +
-  '<bpmn2:definitions xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" ' +
+  '<apmn:definitions xmlns:apmn="http://apmn/spec/APMN/MODEL" ' +
                      'id="empty-definitions" ' +
-                     'targetNamespace="http://bpmn.io/schema/bpmn">' +
-  '</bpmn2:definitions>';
+                     'targetNamespace="http://apmn.io/schema/apmn">' +
+  '</apmn:definitions>';
 
 
 moddle.fromXML(xmlStr, function(err, definitions) {
@@ -33,8 +31,8 @@ moddle.fromXML(xmlStr, function(err, definitions) {
   definitions.set('id', 'NEW ID');
 
   // add a root element
-  var bpmnProcess = moddle.create('bpmn:Process', { id: 'MyProcess_1' });
-  definitions.get('rootElements').push(bpmnProcess);
+  var apmnProcess = moddle.create('apmn:Process', { id: 'MyProcess_1' });
+  definitions.get('rootElements').push(apmnProcess);
 
   moddle.toXML(definitions, function(err, xmlStrUpdated) {
 
@@ -48,8 +46,8 @@ moddle.fromXML(xmlStr, function(err, definitions) {
 
 ## Resources
 
-* [Issues](https://github.com/bpmn-io/bpmn-moddle/issues)
-* [Examples](https://github.com/bpmn-io/bpmn-moddle/tree/master/test/spec/xml)
+* [Issues](https://github.com/apmn-io/apmn-moddle/issues)
+* [Examples](https://github.com/apmn-io/apmn-moddle/tree/master/test/spec/xml)
 * [Changelog](./CHANGELOG.md)
 
 

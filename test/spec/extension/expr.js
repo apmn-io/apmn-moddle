@@ -11,7 +11,7 @@ import {
 } from '../../helper';
 
 
-describe('bpmn-moddle - expr', function() {
+describe('apmn-moddle - expr', function() {
 
   var moddle = createModdle({
     expr: require('../../fixtures/json/model/expr')
@@ -39,15 +39,15 @@ describe('bpmn-moddle - expr', function() {
   }
 
 
-  it('should read expr:Guard (sub-class of bpmn:FormalExpression)', function(done) {
+  it('should read expr:Guard (sub-class of apmn:FormalExpression)', function(done) {
 
     // given
 
     // when
-    fromFile('test/spec/extension/expr-Guard.part.bpmn', 'bpmn:SequenceFlow', function(err, result) {
+    fromFile('test/spec/extension/expr-Guard.part.bpmn', 'apmn:SequenceFlow', function(err, result) {
 
       var expected = {
-        $type: 'bpmn:SequenceFlow',
+        $type: 'apmn:SequenceFlow',
         id: 'SequenceFlow_1',
 
         conditionExpression: {
@@ -64,22 +64,22 @@ describe('bpmn-moddle - expr', function() {
   });
 
 
-  it('should write expr:Guard (sub-class of bpmn:FormalExpression)', function(done) {
+  it('should write expr:Guard (sub-class of apmn:FormalExpression)', function(done) {
 
     // given
-    var sequenceFlow = moddle.create('bpmn:SequenceFlow', {
+    var sequenceFlow = moddle.create('apmn:SequenceFlow', {
       id: 'SequenceFlow_1'
     });
 
     sequenceFlow.conditionExpression = moddle.create('expr:Guard', { body: '${ foo < bar }' });
 
     var expectedXML =
-      '<bpmn:sequenceFlow xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" ' +
+      '<apmn:sequenceFlow xmlns:apmn="http://apmn.io/spec/APMN/MODEL" ' +
                          'xmlns:expr="http://expr" ' +
                          'xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ' +
                          'id="SequenceFlow_1">\n' +
-      '  <bpmn:conditionExpression xsi:type="expr:Guard">${ foo &lt; bar }</bpmn:conditionExpression>\n' +
-      '</bpmn:sequenceFlow>\n';
+      '  <apmn:conditionExpression xsi:type="expr:Guard">${ foo &lt; bar }</apmn:conditionExpression>\n' +
+      '</apmn:sequenceFlow>\n';
 
     // when
     write(sequenceFlow, { format: true }, function(err, result) {

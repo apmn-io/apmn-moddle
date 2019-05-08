@@ -1,5 +1,5 @@
 <bpmn:sequenceFlow
-    xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL"
+    xmlns:bpmn="http://apmn.io/spec/APMN/MODEL"
     xmlns:expr="http://expr"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     id="SequenceFlow_1">

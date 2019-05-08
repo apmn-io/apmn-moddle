@@ -11,9 +11,9 @@
       "name": "AsyncCapable",
       "isAbstract": true,
       "extends": [
-        "bpmn:Activity",
-        "bpmn:Gateway",
-        "bpmn:Event"
+        "apmn:Activity",
+        "apmn:Gateway",
+        "apmn:Event"
       ],
       "properties": [
         {
@@ -32,7 +32,7 @@
     },
     {
       "name": "Assignable",
-      "extends": [ "bpmn:UserTask" ],
+      "extends": [ "apmn:UserTask" ],
       "properties": [
         {
           "name": "assignee",
@@ -43,7 +43,7 @@
     },
     {
       "name": "Calling",
-      "extends": [ "bpmn:CallActivity" ],
+      "extends": [ "apmn:CallActivity" ],
       "properties": [
         {
           "name": "calledElementBinding",
@@ -60,10 +60,10 @@
     {
       "name": "ServiceTaskLike",
       "extends": [
-        "bpmn:ServiceTask",
-        "bpmn:BusinessRuleTask",
-        "bpmn:SendTask",
-        "bpmn:MessageEventDefinition"
+        "apmn:ServiceTask",
+        "apmn:BusinessRuleTask",
+        "apmn:SendTask",
+        "apmn:MessageEventDefinition"
       ],
       "properties": [
         {

@@ -7,15 +7,15 @@ function makeStringRef(desc) {
 }
 
 
-describe('moddle BPMN 2.0 json', function() {
+describe('moddle APMN json', function() {
 
   describe('generate simple model', function() {
 
-    it('transform BPMN20.cmof', function(done) {
+    it('transform APMN.cmof', function(done) {
 
       var builder = new Builder();
 
-      builder.parse('resources/bpmn/cmof/BPMN20.cmof', function(pkg, cmof) {
+      builder.parse('resources/bpmn/cmof/APMN.cmof', function(pkg, cmof) {
 
         builder.cleanIDs();
         builder.cleanAssociations();
@@ -60,7 +60,7 @@ describe('moddle BPMN 2.0 json', function() {
         builder.rename('ExtensionAttributeValue', 'ExtensionElements');
 
 
-        // fix cryptic bpmn:Extension reference
+        // fix cryptic apmn:Extension reference
         builder.alter('Extension#definition', {
           isAttr: true,
           isReference: true
@@ -476,17 +476,17 @@ describe('moddle BPMN 2.0 json', function() {
           delete desc.isAttr;
         });
 
-        builder.exportTo('resources/bpmn/json/bpmn.json');
+        builder.exportTo('resources/bpmn/json/apmn.json');
       }, done);
 
     });
 
 
-    it('transform BPMNDI.cmof', function(done) {
+    it('transform APMNDI.cmof', function(done) {
 
       var builder = new Builder();
 
-      builder.parse('resources/bpmn/cmof/BPMNDI.cmof', function(pkg) {
+      builder.parse('resources/bpmn/cmof/APMNDI.cmof', function(pkg) {
 
         builder.cleanIDs();
         builder.cleanAssociations();
@@ -494,11 +494,11 @@ describe('moddle BPMN 2.0 json', function() {
         // remove associations
         pkg.associations = [];
 
-        builder.alter('BPMNEdge#messageVisibleKind', function(desc) {
+        builder.alter('APMNEdge#messageVisibleKind', function(desc) {
           desc.default = 'initiating';
         });
 
-        builder.exportTo('resources/bpmn/json/bpmndi.json');
+        builder.exportTo('resources/bpmn/json/apmndi.json');
       }, done);
 
     });

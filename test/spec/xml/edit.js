@@ -10,7 +10,7 @@ import {
 } from '../../xml-helper';
 
 
-describe('bpmn-moddle - edit', function() {
+describe('apmn-moddle - edit', function() {
 
   var moddle = createModdle();
 
@@ -57,7 +57,7 @@ describe('bpmn-moddle - edit', function() {
 
         // when
         // creating new data object
-        var dataObject_2 = moddle.create('bpmn:DataObject', { id: 'dataObject_2' });
+        var dataObject_2 = moddle.create('apmn:DataObject', { id: 'dataObject_2' });
 
         // adding data object to its parent (makes sure it is contained in the XML)
         process.flowElements.push(dataObject_2);

@@ -1,7 +1,7 @@
 {
-  "name": "bpmn-moddle",
-  "version": "5.1.6",
-  "description": "A moddle wrapper for BPMN 2.0",
+  "name": "apmn-moddle",
+  "version": "5.1.9",
+  "description": "A moddle wrapper for APMN",
   "scripts": {
     "all": "run-s lint test",
     "lint": "eslint .",
@@ -10,12 +10,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bpmn-io/bpmn-moddle"
+    "url": "https://github.com/apmn-io/apmn-moddle"
   },
   "keywords": [
-    "bpmn",
+    "apmn",
     "moddle",
-    "bpmn20",
     "meta-model"
   ],
   "author": {
@@ -24,15 +23,15 @@
   },
   "contributors": [
     {
-      "name": "bpmn.io contributors",
-      "url": "https://github.com/bpmn-io"
+      "name": "apmn contributors",
+      "url": "https://github.com/apmn-io"
     }
   ],
   "license": "MIT",
   "sideEffects": false,
   "devDependencies": {
+    "apmn-parser": "^0.4.2",
     "chai": "^4.1.2",
-    "cmof-parser": "^0.2.0",
     "eslint": "^4.11.0",
     "eslint-plugin-bpmn-io": "^0.4.1",
     "esm": "^3.0.15",

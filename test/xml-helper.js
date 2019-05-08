@@ -6,11 +6,11 @@ import {
   readFile
 } from './helper';
 
-var BPMN_XSD = 'test/fixtures/xsd/BPMN20.xsd';
+var APMN_XSD = 'test/fixtures/xsd/APMN.xsd';
 
 
 export function fromFile(moddle, file, done) {
-  return fromFilePart(moddle, file, 'bpmn:Definitions', done);
+  return fromFilePart(moddle, file, 'apmn:Definitions', done);
 }
 
 export function fromFilePart(moddle, file, type, done) {
@@ -28,7 +28,7 @@ export function fromValidFile(moddle, file, done) {
       return done(err);
     }
 
-    moddle.fromXML(fileContents, 'bpmn:Definitions', done);
+    moddle.fromXML(fileContents, 'apmn:Definitions', done);
   });
 }
 
@@ -48,7 +48,7 @@ export function validate(err, xml, done) {
     return done(new Error('XML is not defined'));
   }
 
-  SchemaValidator.validateXML(xml, BPMN_XSD, function(err, result) {
+  SchemaValidator.validateXML(xml, APMN_XSD, function(err, result) {
 
     if (err) {
       return done(err);

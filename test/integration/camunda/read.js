@@ -8,7 +8,7 @@ import {
 import camundaPackage from '../../fixtures/json/model/camunda';
 
 
-describe('bpmn-moddle - integration', function() {
+describe('apmn-moddle - integration', function() {
 
   describe('camunda extension', function() {
 

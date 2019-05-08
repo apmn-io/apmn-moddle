@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
-	xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
-	xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
-	xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+<definitions xmlns="http://apmn.io/spec/APMN/MODEL"
+	xmlns:bpmndi="http://apmn.io/spec/APMN/DI"
+	xmlns:dc="http://apmn.io/spec/DD/DC"
+	xmlns:di="http://apmn.io/spec/DD/DI"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	id="_2015102701981"
 	targetNamespace="http://www.omg.org/spec/BPMN/20100524/MODEL" >
@@ -215,182 +215,182 @@
     <sequenceFlow id="ID_Flow_SignalStart_UserTask" sourceRef="ID_SignalStart" targetRef="ID_UserTask"/>
   </process>
 
-  <bpmndi:BPMNDiagram id="Yaoqiang_Diagram-_1">
-    <bpmndi:BPMNPlane bpmnElement="ID_Process">
-      <bpmndi:BPMNShape bpmnElement="ID_StartEvent" id="Yaoqiang-ID_StartEvent">
+  <bpmndi:APMNDiagram id="Yaoqiang_Diagram-_1">
+    <bpmndi:APMNPlane apmnElement="ID_Process">
+      <bpmndi:APMNShape apmnElement="ID_StartEvent" id="Yaoqiang-ID_StartEvent">
         <dc:Bounds height="32.0" width="32.0" x="130.0" y="249.0"/>
-        <bpmndi:BPMNLabel>
+        <bpmndi:APMNLabel>
           <dc:Bounds height="19.8359375" width="29.0" x="131.5" y="289.08203125"/>
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="ID_UserTask" id="Yaoqiang-ID_UserTask">
+        </bpmndi:APMNLabel>
+      </bpmndi:APMNShape>
+      <bpmndi:APMNShape apmnElement="ID_UserTask" id="Yaoqiang-ID_UserTask">
         <dc:Bounds height="60.0" width="90.0" x="288.0" y="234.0"/>
-        <bpmndi:BPMNLabel>
+        <bpmndi:APMNLabel>
           <dc:Bounds height="19.8359375" width="52.0" x="307.0" y="256.08203125"/>
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="ID_ParallelStart" id="Yaoqiang-ID_ParallelStart">
+        </bpmndi:APMNLabel>
+      </bpmndi:APMNShape>
+      <bpmndi:APMNShape apmnElement="ID_ParallelStart" id="Yaoqiang-ID_ParallelStart">
         <dc:Bounds height="42.0" width="42.0" x="456.0" y="244.0"/>
-        <bpmndi:BPMNLabel>
+        <bpmndi:APMNLabel>
           <dc:Bounds height="19.8359375" width="63.0" x="445.5" y="288.0"/>
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="ID_SendEmail" id="Yaoqiang-ID_SendEmail">
+        </bpmndi:APMNLabel>
+      </bpmndi:APMNShape>
+      <bpmndi:APMNShape apmnElement="ID_SendEmail" id="Yaoqiang-ID_SendEmail">
         <dc:Bounds height="60.0" width="90.0" x="561.0" y="156.0"/>
-        <bpmndi:BPMNLabel>
+        <bpmndi:APMNLabel>
           <dc:Bounds height="19.8359375" width="55.0" x="578.5" y="178.08203125"/>
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="ID_ExecuteScript" id="Yaoqiang-ID_ExecuteScript">
+        </bpmndi:APMNLabel>
+      </bpmndi:APMNShape>
+      <bpmndi:APMNShape apmnElement="ID_ExecuteScript" id="Yaoqiang-ID_ExecuteScript">
         <dc:Bounds height="60.0" width="90.0" x="567.0" y="299.0"/>
-        <bpmndi:BPMNLabel>
+        <bpmndi:APMNLabel>
           <dc:Bounds height="19.8359375" width="73.0" x="575.5" y="321.08203125"/>
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="ID_SubmitLazyWorkerSignal" id="Yaoqiang-ID_SubmitLazyWorkerSignal">
+        </bpmndi:APMNLabel>
+      </bpmndi:APMNShape>
+      <bpmndi:APMNShape apmnElement="ID_SubmitLazyWorkerSignal" id="Yaoqiang-ID_SubmitLazyWorkerSignal">
         <dc:Bounds height="32.0" width="32.0" x="381.0" y="366.0"/>
-        <bpmndi:BPMNLabel>
+        <bpmndi:APMNLabel>
           <dc:Bounds height="19.8359375" width="126.0" x="334.0" y="406.08203125"/>
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="ID_ParallelJoin" id="Yaoqiang-ID_ParallelJoin">
+        </bpmndi:APMNLabel>
+      </bpmndi:APMNShape>
+      <bpmndi:APMNShape apmnElement="ID_ParallelJoin" id="Yaoqiang-ID_ParallelJoin">
         <dc:Bounds height="42.0" width="42.0" x="739.0" y="240.0"/>
-        <bpmndi:BPMNLabel>
+        <bpmndi:APMNLabel>
           <dc:Bounds height="19.8359375" width="59.0" x="730.5" y="284.0"/>
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="ID_ExclusiveGateway" id="Yaoqiang-ID_ExclusiveGateway" isMarkerVisible="false">
+        </bpmndi:APMNLabel>
+      </bpmndi:APMNShape>
+      <bpmndi:APMNShape apmnElement="ID_ExclusiveGateway" id="Yaoqiang-ID_ExclusiveGateway" isMarkerVisible="false">
         <dc:Bounds height="42.0" width="42.0" x="838.0" y="240.0"/>
-        <bpmndi:BPMNLabel>
+        <bpmndi:APMNLabel>
           <dc:Bounds height="19.8359375" width="89.0" x="814.5" y="284.0"/>
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="ID_ErrorEnd" id="Yaoqiang-ID_ErrorEnd">
+        </bpmndi:APMNLabel>
+      </bpmndi:APMNShape>
+      <bpmndi:APMNShape apmnElement="ID_ErrorEnd" id="Yaoqiang-ID_ErrorEnd">
         <dc:Bounds height="32.0" width="32.0" x="994.0" y="137.0"/>
-        <bpmndi:BPMNLabel>
+        <bpmndi:APMNLabel>
           <dc:Bounds height="19.8359375" width="30.0" x="995.0" y="177.08203125"/>
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="ID_ServiceTask" id="Yaoqiang-ID_ServiceTask">
+        </bpmndi:APMNLabel>
+      </bpmndi:APMNShape>
+      <bpmndi:APMNShape apmnElement="ID_ServiceTask" id="Yaoqiang-ID_ServiceTask">
         <dc:Bounds height="60.0" width="90.0" x="949.0" y="230.0"/>
-        <bpmndi:BPMNLabel>
+        <bpmndi:APMNLabel>
           <dc:Bounds height="34.8359375" width="59.0" x="964.5" y="244.58203125"/>
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="ID_RegularEnd" id="Yaoqiang-ID_RegularEnd">
+        </bpmndi:APMNLabel>
+      </bpmndi:APMNShape>
+      <bpmndi:APMNShape apmnElement="ID_RegularEnd" id="Yaoqiang-ID_RegularEnd">
         <dc:Bounds height="32.0" width="32.0" x="1099.0" y="245.0"/>
-        <bpmndi:BPMNLabel>
+        <bpmndi:APMNLabel>
           <dc:Bounds height="19.8359375" width="24.0" x="1103.0" y="285.08203125"/>
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="ID_SignalStart" id="Yaoqiang-ID_SignalStart">
+        </bpmndi:APMNLabel>
+      </bpmndi:APMNShape>
+      <bpmndi:APMNShape apmnElement="ID_SignalStart" id="Yaoqiang-ID_SignalStart">
         <dc:Bounds height="32.0" width="32.0" x="132.0" y="167.0"/>
-        <bpmndi:BPMNLabel>
+        <bpmndi:APMNLabel>
           <dc:Bounds height="19.8359375" width="58.0" x="119.0" y="207.08203125"/>
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="ID_UserTimeoutEvent" id="Yaoqiang-ID_UserTimeoutEvent">
+        </bpmndi:APMNLabel>
+      </bpmndi:APMNShape>
+      <bpmndi:APMNShape apmnElement="ID_UserTimeoutEvent" id="Yaoqiang-ID_UserTimeoutEvent">
         <dc:Bounds height="32.0" width="32.0" x="298.0" y="294.0"/>
-        <bpmndi:BPMNLabel>
+        <bpmndi:APMNLabel>
           <dc:Bounds height="19.8359375" width="66.0" x="281.0" y="334.08203125"/>
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNEdge bpmnElement="ID_Flow_SignalStart_UserTask" id="Yaoqiang-ID_Flow_SignalStart_UserTask" sourceElement="ID_SignalStart" targetElement="ID_UserTask">
+        </bpmndi:APMNLabel>
+      </bpmndi:APMNShape>
+      <bpmndi:APMNEdge apmnElement="ID_Flow_SignalStart_UserTask" id="Yaoqiang-ID_Flow_SignalStart_UserTask" sourceElement="ID_SignalStart" targetElement="ID_UserTask">
         <di:waypoint x="164.4687194226713" y="182.0"/>
         <di:waypoint x="212.0" y="182.0"/>
         <di:waypoint x="212.0" y="252.0"/>
         <di:waypoint x="288.5" y="264.0"/>
-        <bpmndi:BPMNLabel>
+        <bpmndi:APMNLabel>
           <dc:Bounds height="19.8359375" width="6.0" x="209.0" y="227.56639096133566"/>
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="ID_Flow_StartEvent_UserTask" id="Yaoqiang-ID_Flow_StartEvent_UserTask" sourceElement="ID_StartEvent" targetElement="ID_UserTask">
+        </bpmndi:APMNLabel>
+      </bpmndi:APMNEdge>
+      <bpmndi:APMNEdge apmnElement="ID_Flow_StartEvent_UserTask" id="Yaoqiang-ID_Flow_StartEvent_UserTask" sourceElement="ID_StartEvent" targetElement="ID_UserTask">
         <di:waypoint x="162.5" y="265.0"/>
         <di:waypoint x="288.5" y="264.0"/>
-        <bpmndi:BPMNLabel>
+        <bpmndi:APMNLabel>
           <dc:Bounds height="19.8359375" width="6.0" x="222.0" y="254.08203125"/>
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="ID_Flow_ParallelJoin_ExclusiveGateway" id="Yaoqiang-ID_Flow_ParallelJoin_ExclusiveGateway" sourceElement="ID_ParallelJoin" targetElement="ID_ExclusiveGateway">
+        </bpmndi:APMNLabel>
+      </bpmndi:APMNEdge>
+      <bpmndi:APMNEdge apmnElement="ID_Flow_ParallelJoin_ExclusiveGateway" id="Yaoqiang-ID_Flow_ParallelJoin_ExclusiveGateway" sourceElement="ID_ParallelJoin" targetElement="ID_ExclusiveGateway">
         <di:waypoint x="781.5" y="261.0"/>
         <di:waypoint x="838.5" y="261.0"/>
-        <bpmndi:BPMNLabel>
+        <bpmndi:APMNLabel>
           <dc:Bounds height="19.8359375" width="6.0" x="807.0" y="251.08203125"/>
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="ID_Flow_UserTask_ParallelStart" id="Yaoqiang-ID_Flow_UserTask_ParallelStart" sourceElement="ID_UserTask" targetElement="ID_ParallelStart">
+        </bpmndi:APMNLabel>
+      </bpmndi:APMNEdge>
+      <bpmndi:APMNEdge apmnElement="ID_Flow_UserTask_ParallelStart" id="Yaoqiang-ID_Flow_UserTask_ParallelStart" sourceElement="ID_UserTask" targetElement="ID_ParallelStart">
         <di:waypoint x="378.5" y="264.0"/>
         <di:waypoint x="456.5" y="265.0"/>
-        <bpmndi:BPMNLabel>
+        <bpmndi:APMNLabel>
           <dc:Bounds height="19.8359375" width="6.0" x="414.0" y="255.08203125"/>
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="ID_Flow_ExecuteScript_ParallelJoin" id="Yaoqiang-ID_Flow_ExecuteScript_ParallelJoin" sourceElement="ID_ExecuteScript" targetElement="ID_ParallelJoin">
+        </bpmndi:APMNLabel>
+      </bpmndi:APMNEdge>
+      <bpmndi:APMNEdge apmnElement="ID_Flow_ExecuteScript_ParallelJoin" id="Yaoqiang-ID_Flow_ExecuteScript_ParallelJoin" sourceElement="ID_ExecuteScript" targetElement="ID_ParallelJoin">
         <di:waypoint x="657.5" y="329.0"/>
         <di:waypoint x="699.0" y="329.0"/>
         <di:waypoint x="699.0" y="260.0"/>
         <di:waypoint x="739.5" y="261.0"/>
-        <bpmndi:BPMNLabel>
+        <bpmndi:APMNLabel>
           <dc:Bounds height="19.8359375" width="6.0" x="696.0" y="285.58203125"/>
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="ID_Flow_EsclusiveGateway_ErrorEnd" id="Yaoqiang-ID_Flow_EsclusiveGateway_ErrorEnd" sourceElement="ID_ExclusiveGateway" targetElement="ID_ErrorEnd">
+        </bpmndi:APMNLabel>
+      </bpmndi:APMNEdge>
+      <bpmndi:APMNEdge apmnElement="ID_Flow_EsclusiveGateway_ErrorEnd" id="Yaoqiang-ID_Flow_EsclusiveGateway_ErrorEnd" sourceElement="ID_ExclusiveGateway" targetElement="ID_ErrorEnd">
         <di:waypoint x="858.0" y="241.5"/>
         <di:waypoint x="858.0" y="152.0"/>
         <di:waypoint x="994.5312805773287" y="152.0"/>
-        <bpmndi:BPMNLabel>
+        <bpmndi:APMNLabel>
           <dc:Bounds height="34.8359375" width="99.0" x="832.0156402886644" y="134.58203125"/>
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="ID_Flow_UserTimeout_SubmitLazyWorkerSignal" id="Yaoqiang-ID_Flow_UserTimeout_SubmitLazyWorkerSignal" sourceElement="ID_UserTimeoutEvent" targetElement="ID_SubmitLazyWorkerSignal">
+        </bpmndi:APMNLabel>
+      </bpmndi:APMNEdge>
+      <bpmndi:APMNEdge apmnElement="ID_Flow_UserTimeout_SubmitLazyWorkerSignal" id="Yaoqiang-ID_Flow_UserTimeout_SubmitLazyWorkerSignal" sourceElement="ID_UserTimeoutEvent" targetElement="ID_SubmitLazyWorkerSignal">
         <di:waypoint x="310.87820552884455" y="325.58469136072927"/>
         <di:waypoint x="298.0" y="381.0"/>
         <di:waypoint x="381.53128057732874" y="381.0"/>
-        <bpmndi:BPMNLabel>
+        <bpmndi:APMNLabel>
           <dc:Bounds height="19.8359375" width="6.0" x="308.3196185578986" y="371.08203125"/>
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="ID_Flow_ParallelStart_ExecuteScript" id="Yaoqiang-ID_Flow_ParallelStart_ExecuteScript" sourceElement="ID_ParallelStart" targetElement="ID_ExecuteScript">
+        </bpmndi:APMNLabel>
+      </bpmndi:APMNEdge>
+      <bpmndi:APMNEdge apmnElement="ID_Flow_ParallelStart_ExecuteScript" id="Yaoqiang-ID_Flow_ParallelStart_ExecuteScript" sourceElement="ID_ParallelStart" targetElement="ID_ExecuteScript">
         <di:waypoint x="497.5" y="264.0"/>
         <di:waypoint x="535.0" y="264.0"/>
         <di:waypoint x="535.0" y="329.0"/>
         <di:waypoint x="567.5" y="329.0"/>
-        <bpmndi:BPMNLabel>
+        <bpmndi:APMNLabel>
           <dc:Bounds height="19.8359375" width="6.0" x="532.0" y="284.08203125"/>
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="ID_Flow_ParallelStart_SendEmail" id="Yaoqiang-ID_Flow_ParallelStart_SendEmail" sourceElement="ID_ParallelStart" targetElement="ID_SendEmail">
+        </bpmndi:APMNLabel>
+      </bpmndi:APMNEdge>
+      <bpmndi:APMNEdge apmnElement="ID_Flow_ParallelStart_SendEmail" id="Yaoqiang-ID_Flow_ParallelStart_SendEmail" sourceElement="ID_ParallelStart" targetElement="ID_SendEmail">
         <di:waypoint x="497.5" y="264.0"/>
         <di:waypoint x="530.0" y="264.0"/>
         <di:waypoint x="530.0" y="186.0"/>
         <di:waypoint x="561.5" y="186.0"/>
-        <bpmndi:BPMNLabel>
+        <bpmndi:APMNLabel>
           <dc:Bounds height="19.8359375" width="6.0" x="527.0" y="215.58203125"/>
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="ID_Flow_SendEmail_ParallelJoin" id="Yaoqiang-ID_Flow_SendEmail_ParallelJoin" sourceElement="ID_SendEmail" targetElement="ID_ParallelJoin">
+        </bpmndi:APMNLabel>
+      </bpmndi:APMNEdge>
+      <bpmndi:APMNEdge apmnElement="ID_Flow_SendEmail_ParallelJoin" id="Yaoqiang-ID_Flow_SendEmail_ParallelJoin" sourceElement="ID_SendEmail" targetElement="ID_ParallelJoin">
         <di:waypoint x="651.5" y="186.0"/>
         <di:waypoint x="698.0" y="186.0"/>
         <di:waypoint x="698.0" y="260.0"/>
         <di:waypoint x="739.5" y="261.0"/>
-        <bpmndi:BPMNLabel>
+        <bpmndi:APMNLabel>
           <dc:Bounds height="19.8359375" width="6.0" x="695.0" y="211.08203125"/>
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="ID_Flow_EsclusiveGateway_ServiceTask" id="Yaoqiang-ID_Flow_EsclusiveGateway_ServiceTask" sourceElement="ID_ExclusiveGateway" targetElement="ID_ServiceTask">
+        </bpmndi:APMNLabel>
+      </bpmndi:APMNEdge>
+      <bpmndi:APMNEdge apmnElement="ID_Flow_EsclusiveGateway_ServiceTask" id="Yaoqiang-ID_Flow_EsclusiveGateway_ServiceTask" sourceElement="ID_ExclusiveGateway" targetElement="ID_ServiceTask">
         <di:waypoint x="880.5" y="261.0"/>
         <di:waypoint x="949.5" y="260.0"/>
-        <bpmndi:BPMNLabel>
+        <bpmndi:APMNLabel>
           <dc:Bounds height="19.8359375" width="104.0" x="862.5" y="250.08203125"/>
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="ID_Flow_ServiceTask_RegularEnd" id="Yaoqiang-ID_Flow_ServiceTask_RegularEnd" sourceElement="ID_ServiceTask" targetElement="ID_RegularEnd">
+        </bpmndi:APMNLabel>
+      </bpmndi:APMNEdge>
+      <bpmndi:APMNEdge apmnElement="ID_Flow_ServiceTask_RegularEnd" id="Yaoqiang-ID_Flow_ServiceTask_RegularEnd" sourceElement="ID_ServiceTask" targetElement="ID_RegularEnd">
         <di:waypoint x="1039.5" y="260.0"/>
         <di:waypoint x="1099.5" y="261.0"/>
-        <bpmndi:BPMNLabel>
+        <bpmndi:APMNLabel>
           <dc:Bounds height="19.8359375" width="6.0" x="1066.0" y="251.08203125"/>
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-    </bpmndi:BPMNPlane>
-  </bpmndi:BPMNDiagram>
+        </bpmndi:APMNLabel>
+      </bpmndi:APMNEdge>
+    </bpmndi:APMNPlane>
+  </bpmndi:APMNDiagram>
 </definitions>

@@ -1,11 +1,11 @@
 {
-  "name": "bpmn.io colors for BPMN",
-  "uri": "http://bpmn.io/schema/bpmn/biocolor/1.0",
+  "name": "apmn.io colors for APMN",
+  "uri": "http://apmn.io/schema/apmn/biocolor/1.0",
   "prefix": "bioc",
   "types": [
     {
       "name": "ColoredShape",
-      "extends": [ "bpmndi:BPMNShape" ],
+      "extends": [ "apmndi:APMNShape" ],
       "properties": [
         {
           "name": "stroke",
@@ -21,7 +21,7 @@
     },
     {
       "name": "ColoredEdge",
-      "extends": [ "bpmndi:BPMNEdge" ],
+      "extends": [ "apmndi:APMNEdge" ],
       "properties": [
         {
           "name": "stroke",

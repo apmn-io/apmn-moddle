@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" id="definitions"
-                  targetNamespace="http://bpmn.io/schema/bpmn">
+<bpmn:definitions xmlns:bpmn="http://apmn.io/spec/APMN/MODEL" id="definitions"
+                  targetNamespace="http://apmn.io/schema/apmn">
   <bpmn:message id="fooInMessage" />
   <bpmn:message id="fooOutMessage" />
   <bpmn:interface name="bar">

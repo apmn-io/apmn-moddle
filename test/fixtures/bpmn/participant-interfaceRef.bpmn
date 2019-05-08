@@ -1,5 +1,5 @@
-<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL"
-                  targetNamespace="http://bpmn.io/bpmn">
+<bpmn:definitions xmlns:bpmn="http://apmn.io/spec/APMN/MODEL"
+                  targetNamespace="http://apmn.io/apmn">
   <bpmn:message id="Message_In" />
   <bpmn:message id="Message_Out" />
   <bpmn:error id="BarError" />

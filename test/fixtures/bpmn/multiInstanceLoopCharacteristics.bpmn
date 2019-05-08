@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
-                  xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" expressionLanguage="C#">
+<bpmn:definitions xmlns:bpmn="http://apmn.io/spec/APMN/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmndi="http://apmn.io/spec/APMN/DI"
+                  xmlns:di="http://apmn.io/spec/DD/DI" xmlns:dc="http://apmn.io/spec/DD/DC" id="Definitions_1" targetNamespace="http://apmn.io/schema/apmn" expressionLanguage="C#">
   <bpmn:itemDefinition id="TravelOrderItem" structureRef="Composite" />
   <bpmn:itemDefinition id="TravelOrdersItem" structureRef="Table" />
   <bpmn:itemDefinition id="TextField" structureRef="Text"/>
@@ -102,80 +102,80 @@
       </bpmn:potentialOwner>
     </bpmn:userTask>
   </bpmn:process>
-  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
-    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_0f4232i">
-      <bpmndi:BPMNShape id="Participant_1vspv4b_di" bpmnElement="Participant_1vspv4b">
+  <bpmndi:APMNDiagram id="BPMNDiagram_1">
+    <bpmndi:APMNPlane id="BPMNPlane_1" apmnElement="Collaboration_0f4232i">
+      <bpmndi:APMNShape id="Participant_1vspv4b_di" apmnElement="Participant_1vspv4b">
         <dc:Bounds x="118" y="90" width="922" height="499"/>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNEdge id="SequenceFlow_19mjczs_di" bpmnElement="SequenceFlow_19mjczs">
+      </bpmndi:APMNShape>
+      <bpmndi:APMNEdge id="SequenceFlow_19mjczs_di" apmnElement="SequenceFlow_19mjczs">
         <di:waypoint xsi:type="dc:Point" x="234" y="215"/>
         <di:waypoint xsi:type="dc:Point" x="271" y="215"/>
         <di:waypoint xsi:type="dc:Point" x="271" y="215"/>
         <di:waypoint xsi:type="dc:Point" x="308" y="215"/>
-        <bpmndi:BPMNLabel>
+        <bpmndi:APMNLabel>
           <dc:Bounds x="199" y="205" width="90" height="20"/>
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNShape id="Lane_031mcj4_di" bpmnElement="Lane_031mcj4">
+        </bpmndi:APMNLabel>
+      </bpmndi:APMNEdge>
+      <bpmndi:APMNShape id="Lane_031mcj4_di" apmnElement="Lane_031mcj4">
         <dc:Bounds x="148" y="90" width="892" height="248"/>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Lane_1k2pby1_di" bpmnElement="Lane_1k2pby1">
+      </bpmndi:APMNShape>
+      <bpmndi:APMNShape id="Lane_1k2pby1_di" apmnElement="Lane_1k2pby1">
         <dc:Bounds x="148" y="338" width="892" height="251"/>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="ServiceTask_1l60ojj_di" bpmnElement="GetDataTask">
+      </bpmndi:APMNShape>
+      <bpmndi:APMNShape id="ServiceTask_1l60ojj_di" apmnElement="GetDataTask">
         <dc:Bounds x="308" y="175" width="100" height="80"/>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="EndEvent_09bhhnm_di" bpmnElement="EndEvent_09bhhnm">
+      </bpmndi:APMNShape>
+      <bpmndi:APMNShape id="EndEvent_09bhhnm_di" apmnElement="EndEvent_09bhhnm">
         <dc:Bounds x="896" y="438" width="36" height="36"/>
-        <bpmndi:BPMNLabel>
+        <bpmndi:APMNLabel>
           <dc:Bounds x="869" y="474" width="90" height="20"/>
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="UserTask_1u1r0p4_di" bpmnElement="CheckDataTask">
+        </bpmndi:APMNLabel>
+      </bpmndi:APMNShape>
+      <bpmndi:APMNShape id="UserTask_1u1r0p4_di" apmnElement="CheckDataTask">
         <dc:Bounds x="501" y="175" width="100" height="80"/>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNEdge id="SequenceFlow_155rtvl_di" bpmnElement="SequenceFlow_155rtvl">
+      </bpmndi:APMNShape>
+      <bpmndi:APMNEdge id="SequenceFlow_155rtvl_di" apmnElement="SequenceFlow_155rtvl">
         <di:waypoint xsi:type="dc:Point" x="601" y="215"/>
         <di:waypoint xsi:type="dc:Point" x="687" y="215"/>
-        <bpmndi:BPMNLabel>
+        <bpmndi:APMNLabel>
           <dc:Bounds x="554.5" y="444" width="90" height="20"/>
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNShape id="ServiceTask_0jpwr74_di" bpmnElement="SaveDataTask">
+        </bpmndi:APMNLabel>
+      </bpmndi:APMNEdge>
+      <bpmndi:APMNShape id="ServiceTask_0jpwr74_di" apmnElement="SaveDataTask">
         <dc:Bounds x="687" y="175" width="100" height="80"/>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNEdge id="SequenceFlow_011pa7g_di" bpmnElement="SequenceFlow_011pa7g">
+      </bpmndi:APMNShape>
+      <bpmndi:APMNEdge id="SequenceFlow_011pa7g_di" apmnElement="SequenceFlow_011pa7g">
         <di:waypoint xsi:type="dc:Point" x="408" y="215"/>
         <di:waypoint xsi:type="dc:Point" x="501" y="215"/>
-        <bpmndi:BPMNLabel>
+        <bpmndi:APMNLabel>
           <dc:Bounds x="411" y="205" width="90" height="20"/>
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="SequenceFlow_0dde9jz_di" bpmnElement="SequenceFlow_0dde9jz">
+        </bpmndi:APMNLabel>
+      </bpmndi:APMNEdge>
+      <bpmndi:APMNEdge id="SequenceFlow_0dde9jz_di" apmnElement="SequenceFlow_0dde9jz">
         <di:waypoint xsi:type="dc:Point" x="787" y="456"/>
         <di:waypoint xsi:type="dc:Point" x="838" y="456"/>
         <di:waypoint xsi:type="dc:Point" x="838" y="456"/>
         <di:waypoint xsi:type="dc:Point" x="896" y="456"/>
-        <bpmndi:BPMNLabel>
+        <bpmndi:APMNLabel>
           <dc:Bounds x="793" y="325.5" width="90" height="20"/>
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="SequenceFlow_03uzecg_di" bpmnElement="SequenceFlow_03uzecg">
+        </bpmndi:APMNLabel>
+      </bpmndi:APMNEdge>
+      <bpmndi:APMNEdge id="SequenceFlow_03uzecg_di" apmnElement="SequenceFlow_03uzecg">
         <di:waypoint xsi:type="dc:Point" x="737" y="255"/>
         <di:waypoint xsi:type="dc:Point" x="737" y="416"/>
-        <bpmndi:BPMNLabel>
+        <bpmndi:APMNLabel>
           <dc:Bounds x="692" y="325.5" width="90" height="20"/>
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNShape id="StartEvent_07ppqwd_di" bpmnElement="StartEvent_07ppqwd">
+        </bpmndi:APMNLabel>
+      </bpmndi:APMNEdge>
+      <bpmndi:APMNShape id="StartEvent_07ppqwd_di" apmnElement="StartEvent_07ppqwd">
         <dc:Bounds x="198" y="197" width="36" height="36"/>
-        <bpmndi:BPMNLabel>
+        <bpmndi:APMNLabel>
           <dc:Bounds x="171" y="233" width="90" height="20"/>
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="UserTask_1dmthn1_di" bpmnElement="InfoTask">
+        </bpmndi:APMNLabel>
+      </bpmndi:APMNShape>
+      <bpmndi:APMNShape id="UserTask_1dmthn1_di" apmnElement="InfoTask">
         <dc:Bounds x="687" y="416" width="100" height="80"/>
-      </bpmndi:BPMNShape>
-    </bpmndi:BPMNPlane>
-  </bpmndi:BPMNDiagram>
+      </bpmndi:APMNShape>
+    </bpmndi:APMNPlane>
+  </bpmndi:APMNDiagram>
 </bpmn:definitions>

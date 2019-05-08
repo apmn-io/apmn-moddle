@@ -1,7 +1,7 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" targetNamespace="http://www.omg.org/spec/DD/20100524/DI" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://apmn.io/spec/DD/DC" xmlns:di="http://apmn.io/spec/DD/DI" targetNamespace="http://apmn.io/spec/DD/DI" elementFormDefault="qualified" attributeFormDefault="unqualified">
 
-	<xsd:import namespace="http://www.omg.org/spec/DD/20100524/DC" schemaLocation="DC.xsd" />
+	<xsd:import namespace="http://apmn.io/spec/DD/DC" schemaLocation="DC.xsd" />
 	
 	<xsd:element name="DiagramElement" type="di:DiagramElement" />
 	<xsd:element name="Diagram" type="di:Diagram" />

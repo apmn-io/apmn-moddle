@@ -7,7 +7,7 @@
     {
       "name": "Guard",
       "superClass": [
-        "bpmn:FormalExpression"
+        "apmn:FormalExpression"
       ]
     }
   ]

@@ -11,7 +11,7 @@ import {
 } from '../../xml-helper';
 
 
-describe('bpmn-moddle - integration', function() {
+describe('apmn-moddle - integration', function() {
 
   describe('camunda extension', function() {
 
@@ -22,7 +22,7 @@ describe('bpmn-moddle - integration', function() {
     }
 
 
-    describe('should serialize valid BPMN 2.0 after read', function() {
+    describe('should serialize valid APMN after read', function() {
 
       this.timeout(15000);
 

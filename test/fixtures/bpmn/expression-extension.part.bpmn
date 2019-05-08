@@ -1,8 +1,8 @@
 <bpmn:resourceAssignmentExpression
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL"
+    xmlns:bpmn="http://apmn.io/spec/APMN/MODEL"
     xmlns:myNs="http://some-company/schema/bpmn/myNs"
-    xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+    xmlns:dc="http://apmn.io/spec/DD/DC"
     id="ID_19xkliu">
   <bpmn:expression
     xsi:type="bpmn:tExpression"

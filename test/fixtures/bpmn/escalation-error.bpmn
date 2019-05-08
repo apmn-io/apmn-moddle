@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd" id="test" targetNamespace="http://bpmn.io/schema/bpmn">
+<definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://apmn.io/spec/APMN/MODEL" xmlns:bpmndi="http://apmn.io/spec/APMN/DI" xmlns:omgdc="http://apmn.io/spec/DD/DC" xmlns:omgdi="http://apmn.io/spec/DD/DI" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd" id="test" targetNamespace="http://apmn.io/schema/apmn">
 
   <escalation id="escalation"/>
   <error id="error"/>

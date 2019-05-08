@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:cmof="http://schema.omg.org/spec/MOF/2.0/cmof.xml">
-  <cmof:Package xmi:id="_0" name="DC" uri="http://www.omg.org/spec/DD/20100524/DC-XMI">
+  <cmof:Package xmi:id="_0" name="DC" uri="http://apmn.io/spec/DD/DC-XMI">
     <ownedMember xmi:type="cmof:PrimitiveType" xmi:id="Boolean" name="Boolean"/>
     <ownedMember xmi:type="cmof:PrimitiveType" xmi:id="Integer" name="Integer"/>
     <ownedMember xmi:type="cmof:PrimitiveType" xmi:id="Real" name="Real"/>
@@ -31,7 +31,7 @@
     </ownedMember>
   </cmof:Package>
   <cmof:Tag xmi:id="_1" name="org.omg.xmi.nsPrefix" value="dc" element="_0"/>
-  <cmof:Tag xmi:id="_2" name="org.omg.xmi.nsURI" value="http://www.omg.org/spec/DD/20100524/DC-XMI" element="_0"/>
+  <cmof:Tag xmi:id="_2" name="org.omg.xmi.nsURI" value="http://apmn.io/spec/DD/DC-XMI" element="_0"/>
   <cmof:Tag xmi:id="_3" name="org.omg.xmi.schemaType" value="http://www.w3.org/2001/XMLSchema#boolean" element="Boolean"/>
   <cmof:Tag xmi:id="_4" name="org.omg.xmi.schemaType" value="http://www.w3.org/2001/XMLSchema#integer" element="Integer"/>
   <cmof:Tag xmi:id="_5" name="org.omg.xmi.schemaType" value="http://www.w3.org/2001/XMLSchema#double" element="Real"/>

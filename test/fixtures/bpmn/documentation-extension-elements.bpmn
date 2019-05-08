@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:vendor="http://vendor" id="documentation-extension-elements" targetNamespace="http://bpmn.io/schema/bpmn">
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://apmn.io/spec/APMN/MODEL" xmlns:vendor="http://vendor" id="documentation-extension-elements" targetNamespace="http://apmn.io/schema/apmn">
   <bpmn2:process id="Process_1">
     <bpmn2:documentation>THIS IS A PROCESS</bpmn2:documentation>
     <bpmn2:task id="Task_1" name="Task 1">

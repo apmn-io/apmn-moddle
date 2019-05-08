@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:cmof="http://schema.omg.org/spec/MOF/2.0/cmof.xml">
+  <cmof:Package xmi:id="_0" name="APMNDI" uri="http://apmn.io/spec/APMN/DI-XMI">
+    <packageImport xmi:type="cmof:PackageImport" xmi:id="_packageImport.0" importingNamespace="_0">
+      <importedPackage xmi:type="cmof:Package" href="DI.cmof#_0"/>
+    </packageImport>
+    <packageImport xmi:type="cmof:PackageImport" xmi:id="_packageImport.1" importingNamespace="_0">
+      <importedPackage xmi:type="cmof:Package" href="DC.cmof#_0"/>
+    </packageImport>
+    <ownedMember xmi:type="cmof:Class" xmi:id="APMNDiagram" name="APMNDiagram">
+      <ownedAttribute xmi:type="cmof:Property" xmi:id="APMNDiagram-plane" name="plane" visibility="public" type="APMNPlane" isComposite="true" association="A_plane_diagram">
+        <redefinedProperty xmi:type="cmof:Property" href="DI.cmof#Diagram-rootElement"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="cmof:Property" xmi:id="APMNDiagram-labelStyle" name="labelStyle" visibility="public" type="APMNLabelStyle" upper="*" lower="0" isComposite="true" association="A_labelStyle_diagram">
+        <subsettedProperty xmi:type="cmof:Property" href="DI.cmof#Diagram-ownedStyle"/>
+      </ownedAttribute>
+      <superClass xmi:type="cmof:Class" href="DI.cmof#Diagram"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Class" xmi:id="APMNPlane" name="APMNPlane">
+      <ownedAttribute xmi:type="cmof:Property" xmi:id="APMNPlane-apmnElement" name="apmnElement" visibility="public" lower="0" association="A_apmnElement_plane">
+        <type xmi:type="cmof:Class" href="APMN.cmof#BaseElement"/>
+        <redefinedProperty xmi:type="cmof:Property" href="DI.cmof#DiagramElement-modelElement"/>
+      </ownedAttribute>
+      <superClass xmi:type="cmof:Class" href="DI.cmof#Plane"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Class" xmi:id="APMNShape" name="APMNShape">
+      <ownedAttribute xmi:type="cmof:Property" xmi:id="APMNShape-apmnElement" name="apmnElement" visibility="public" lower="0" association="A_apmnElement_shape">
+        <type xmi:type="cmof:Class" href="APMN.cmof#BaseElement"/>
+        <redefinedProperty xmi:type="cmof:Property" href="DI.cmof#DiagramElement-modelElement"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="cmof:Property" xmi:id="APMNShape-isHorizontal" name="isHorizontal" visibility="public" lower="0">
+        <type xmi:type="cmof:PrimitiveType" href="DC.cmof#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="cmof:Property" xmi:id="APMNShape-isExpanded" name="isExpanded" visibility="public" lower="0">
+        <type xmi:type="cmof:PrimitiveType" href="DC.cmof#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="cmof:Property" xmi:id="APMNShape-isMarkerVisible" name="isMarkerVisible" visibility="public" lower="0">
+        <type xmi:type="cmof:PrimitiveType" href="DC.cmof#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="cmof:Property" xmi:id="APMNShape-label" name="label" visibility="public" type="APMNLabel" lower="0" isComposite="true" association="A_label_shape">
+        <subsettedProperty xmi:type="cmof:Property" href="DI.cmof#LabeledShape-ownedLabel"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="cmof:Property" xmi:id="APMNShape-isMessageVisible" name="isMessageVisible" visibility="public" lower="0">
+        <type xmi:type="cmof:PrimitiveType" href="DC.cmof#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="cmof:Property" xmi:id="APMNShape-participantBandKind" name="participantBandKind" visibility="public" type="ParticipantBandKind" lower="0"/>
+      <ownedAttribute xmi:type="cmof:Property" xmi:id="APMNShape-choreographyActivityShape" name="choreographyActivityShape" visibility="public" type="APMNShape" lower="0" association="A_choreographyActivityShape_participantBandShape"/>
+      <superClass xmi:type="cmof:Class" href="DI.cmof#LabeledShape"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Class" xmi:id="APMNEdge" name="APMNEdge">
+      <ownedAttribute xmi:type="cmof:Property" xmi:id="APMNEdge-label" name="label" visibility="public" type="APMNLabel" lower="0" isComposite="true" association="A_label_edge">
+        <subsettedProperty xmi:type="cmof:Property" href="DI.cmof#LabeledEdge-ownedLabel"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="cmof:Property" xmi:id="APMNEdge-apmnElement" name="apmnElement" visibility="public" lower="0" association="A_apmnElement_edge">
+        <type xmi:type="cmof:Class" href="APMN.cmof#BaseElement"/>
+        <redefinedProperty xmi:type="cmof:Property" href="DI.cmof#DiagramElement-modelElement"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="cmof:Property" xmi:id="APMNEdge-sourceElement" name="sourceElement" visibility="public" lower="0" association="A_sourceElement_sourceEdge">
+        <type xmi:type="cmof:Class" href="DI.cmof#DiagramElement"/>
+        <redefinedProperty xmi:type="cmof:Property" href="DI.cmof#Edge-source"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="cmof:Property" xmi:id="APMNEdge-targetElement" name="targetElement" visibility="public" lower="0" association="A_targetElement_targetEdge">
+        <type xmi:type="cmof:Class" href="DI.cmof#DiagramElement"/>
+        <redefinedProperty xmi:type="cmof:Property" href="DI.cmof#Edge-target"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="cmof:Property" xmi:id="APMNEdge-messageVisibleKind" name="messageVisibleKind" visibility="public" type="MessageVisibleKind" lower="0"/>
+      <superClass xmi:type="cmof:Class" href="DI.cmof#LabeledEdge"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Class" xmi:id="APMNLabel" name="APMNLabel">
+      <ownedAttribute xmi:type="cmof:Property" xmi:id="APMNLabel-labelStyle" name="labelStyle" visibility="public" type="APMNLabelStyle" lower="0" association="A_labelStyle_label">
+        <redefinedProperty xmi:type="cmof:Property" href="DI.cmof#DiagramElement-style"/>
+      </ownedAttribute>
+      <superClass xmi:type="cmof:Class" href="DI.cmof#Label"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Class" xmi:id="APMNLabelStyle" name="APMNLabelStyle">
+      <ownedAttribute xmi:type="cmof:Property" xmi:id="APMNLabelStyle-font" name="font" visibility="public">
+        <type xmi:type="cmof:DataType" href="DC.cmof#Font"/>
+      </ownedAttribute>
+      <superClass xmi:type="cmof:Class" href="DI.cmof#Style"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Enumeration" xmi:id="ParticipantBandKind" name="ParticipantBandKind">
+      <ownedLiteral xmi:type="cmof:EnumerationLiteral" xmi:id="ParticipantBandKind-top_initiating" name="top_initiating" classifier="ParticipantBandKind" enumeration="ParticipantBandKind"/>
+      <ownedLiteral xmi:type="cmof:EnumerationLiteral" xmi:id="ParticipantBandKind-middle_initiating" name="middle_initiating" classifier="ParticipantBandKind" enumeration="ParticipantBandKind"/>
+      <ownedLiteral xmi:type="cmof:EnumerationLiteral" xmi:id="ParticipantBandKind-bottom_initiating" name="bottom_initiating" classifier="ParticipantBandKind" enumeration="ParticipantBandKind"/>
+      <ownedLiteral xmi:type="cmof:EnumerationLiteral" xmi:id="ParticipantBandKind-top_non_initiating" name="top_non_initiating" classifier="ParticipantBandKind" enumeration="ParticipantBandKind"/>
+      <ownedLiteral xmi:type="cmof:EnumerationLiteral" xmi:id="ParticipantBandKind-middle_non_initiating" name="middle_non_initiating" classifier="ParticipantBandKind" enumeration="ParticipantBandKind"/>
+      <ownedLiteral xmi:type="cmof:EnumerationLiteral" xmi:id="ParticipantBandKind-bottom_non_initiating" name="bottom_non_initiating" classifier="ParticipantBandKind" enumeration="ParticipantBandKind"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Enumeration" xmi:id="MessageVisibleKind" name="MessageVisibleKind">
+      <ownedLiteral xmi:type="cmof:EnumerationLiteral" xmi:id="MessageVisibleKind-initiating" name="initiating" classifier="MessageVisibleKind" enumeration="MessageVisibleKind"/>
+      <ownedLiteral xmi:type="cmof:EnumerationLiteral" xmi:id="MessageVisibleKind-non_initiating" name="non_initiating" classifier="MessageVisibleKind" enumeration="MessageVisibleKind"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" xmi:id="A_plane_diagram" name="A_plane_diagram" visibility="private" memberEnd="APMNDiagram-plane A_plane_diagram-diagram">
+      <ownedEnd xmi:type="cmof:Property" xmi:id="A_plane_diagram-diagram" name="diagram" visibility="public" type="APMNDiagram" owningAssociation="A_plane_diagram" association="A_plane_diagram">
+        <redefinedProperty xmi:type="cmof:Property" href="DI.cmof#DiagramElement-owningDiagram"/>
+      </ownedEnd>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" xmi:id="A_apmnElement_edge" name="A_apmnElement_edge" visibility="private" memberEnd="APMNEdge-apmnElement A_apmnElement_edge-edge">
+      <ownedEnd xmi:type="cmof:Property" xmi:id="A_apmnElement_edge-edge" name="edge" visibility="public" type="APMNEdge" upper="*" lower="0" owningAssociation="A_apmnElement_edge" association="A_apmnElement_edge">
+        <redefinedProperty xmi:type="cmof:Property" href="DI.cmof#A_modelElement_diagramElement-diagramElement"/>
+      </ownedEnd>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" xmi:id="A_apmnElement_shape" name="A_apmnElement_shape" visibility="private" memberEnd="APMNShape-apmnElement A_apmnElement_shape-shape">
+      <ownedEnd xmi:type="cmof:Property" xmi:id="A_apmnElement_shape-shape" name="shape" visibility="public" type="APMNShape" upper="*" lower="0" owningAssociation="A_apmnElement_shape" association="A_apmnElement_shape">
+        <redefinedProperty xmi:type="cmof:Property" href="DI.cmof#A_modelElement_diagramElement-diagramElement"/>
+      </ownedEnd>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" xmi:id="A_apmnElement_plane" name="A_apmnElement_plane" visibility="private" memberEnd="APMNPlane-apmnElement A_apmnElement_plane-plane">
+      <ownedEnd xmi:type="cmof:Property" xmi:id="A_apmnElement_plane-plane" name="plane" visibility="public" type="APMNPlane" upper="*" lower="0" owningAssociation="A_apmnElement_plane" association="A_apmnElement_plane">
+        <redefinedProperty xmi:type="cmof:Property" href="DI.cmof#A_modelElement_diagramElement-diagramElement"/>
+      </ownedEnd>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" xmi:id="A_label_edge" name="A_label_edge" visibility="private" memberEnd="APMNEdge-label A_label_edge-edge">
+      <ownedEnd xmi:type="cmof:Property" xmi:id="A_label_edge-edge" name="edge" visibility="public" type="APMNEdge" lower="0" owningAssociation="A_label_edge" association="A_label_edge">
+        <subsettedProperty xmi:type="cmof:Property" href="DI.cmof#A_ownedLabel_owningEdge-owningEdge"/>
+      </ownedEnd>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" xmi:id="A_label_shape" name="A_label_shape" visibility="private" memberEnd="APMNShape-label A_label_shape-shape">
+      <ownedEnd xmi:type="cmof:Property" xmi:id="A_label_shape-shape" name="shape" visibility="public" type="APMNShape" lower="0" owningAssociation="A_label_shape" association="A_label_shape">
+        <subsettedProperty xmi:type="cmof:Property" href="DI.cmof#A_ownedLabel_owningShape-owningShape"/>
+      </ownedEnd>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" xmi:id="A_labelStyle_label" name="A_labelStyle_label" visibility="private" memberEnd="APMNLabel-labelStyle A_labelStyle_label-label">
+      <ownedEnd xmi:type="cmof:Property" xmi:id="A_labelStyle_label-label" name="label" visibility="public" type="APMNLabel" upper="*" lower="0" owningAssociation="A_labelStyle_label" association="A_labelStyle_label">
+        <redefinedProperty xmi:type="cmof:Property" href="DI.cmof#A_style_diagramElement-diagramElement"/>
+      </ownedEnd>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" xmi:id="A_sourceElement_sourceEdge" name="A_sourceElement_sourceEdge" visibility="private" memberEnd="APMNEdge-sourceElement A_sourceElement_sourceEdge-sourceEdge">
+      <ownedEnd xmi:type="cmof:Property" xmi:id="A_sourceElement_sourceEdge-sourceEdge" name="sourceEdge" visibility="public" type="APMNEdge" upper="*" lower="0" owningAssociation="A_sourceElement_sourceEdge" association="A_sourceElement_sourceEdge">
+        <redefinedProperty xmi:type="cmof:Property" href="DI.cmof#A_source_sourceEdge-sourceEdge"/>
+      </ownedEnd>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" xmi:id="A_targetElement_targetEdge" name="A_targetElement_targetEdge" visibility="private" memberEnd="APMNEdge-targetElement A_targetElement_targetEdge-targetEdge">
+      <ownedEnd xmi:type="cmof:Property" xmi:id="A_targetElement_targetEdge-targetEdge" name="targetEdge" visibility="public" type="APMNEdge" upper="*" lower="0" owningAssociation="A_targetElement_targetEdge" association="A_targetElement_targetEdge">
+        <redefinedProperty xmi:type="cmof:Property" href="DI.cmof#A_target_targetEdge-targetEdge"/>
+      </ownedEnd>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" xmi:id="A_labelStyle_diagram" name="A_labelStyle_diagram" visibility="private" memberEnd="APMNDiagram-labelStyle A_labelStyle_diagram-diagram">
+      <ownedEnd xmi:type="cmof:Property" xmi:id="A_labelStyle_diagram-diagram" name="diagram" visibility="public" type="APMNDiagram" owningAssociation="A_labelStyle_diagram" association="A_labelStyle_diagram">
+        <subsettedProperty xmi:type="cmof:Property" href="DI.cmof#A_ownedStyle_owningDiagram-owningDiagram"/>
+      </ownedEnd>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" xmi:id="A_choreographyActivityShape_participantBandShape" name="A_choreographyActivityShape_participantBandShape" visibility="private" memberEnd="APMNShape-choreographyActivityShape A_choreographyActivityShape_participantBandShape-participantBandShape">
+      <ownedEnd xmi:type="cmof:Property" xmi:id="A_choreographyActivityShape_participantBandShape-participantBandShape" name="participantBandShape" visibility="public" type="APMNShape" owningAssociation="A_choreographyActivityShape_participantBandShape" association="A_choreographyActivityShape_participantBandShape"/>
+    </ownedMember>
+  </cmof:Package>
+  <cmof:Tag xmi:id="_1" name="org.omg.xmi.nsPrefix" value="apmndi" element="_0"/>
+  <cmof:Tag xmi:id="_2" name="org.omg.xmi.nsURI" value="http://apmn.io/spec/APMN/DI-XMI" element="_0"/>
+</xmi:XMI>

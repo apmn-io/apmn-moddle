@@ -1,6 +1,6 @@
 {
   "name": "DC",
-  "uri": "http://www.omg.org/spec/DD/20100524/DC",
+  "uri": "http://apmn.io/spec/DD/DC",
   "types": [
     {
       "name": "Boolean"

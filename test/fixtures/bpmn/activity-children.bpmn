@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:vendor="http://vendor" id="activity-children" targetNamespace="http://bpmn.io/schema/bpmn">
+<definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://apmn.io/spec/APMN/MODEL" xmlns:vendor="http://vendor" id="activity-children" targetNamespace="http://apmn.io/schema/apmn">
   <process id="Process_1">
     <dataObjectReference id="DataObjectReference_1" />
     <userTask id="Task_1" name="Task 1">

@@ -1,6 +1,6 @@
 import fs from 'fs';
 
-import SimpleBpmnModdle from '../';
+import SimpleApmnModdle from '../';
 
 export function ensureDirExists(dir) {
 
@@ -14,5 +14,5 @@ export function readFile(filename) {
 }
 
 export function createModdle(additionalPackages, options) {
-  return new SimpleBpmnModdle(additionalPackages, options);
+  return new SimpleApmnModdle(additionalPackages, options);
 }

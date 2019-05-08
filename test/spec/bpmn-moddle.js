@@ -5,7 +5,7 @@ import {
 } from '../helper';
 
 
-describe('bpmn-moddle', function() {
+describe('apmn-moddle', function() {
 
   var moddle = createModdle();
 
@@ -14,7 +14,7 @@ describe('bpmn-moddle', function() {
 
     it('should publish type', function() {
       // when
-      var type = moddle.getType('bpmn:Process');
+      var type = moddle.getType('apmn:Process');
 
       // then
       expect(type).to.exist;
@@ -25,7 +25,7 @@ describe('bpmn-moddle', function() {
     it('should redefine property', function() {
 
       // when
-      var type = moddle.getType('bpmndi:BPMNShape');
+      var type = moddle.getType('apmndi:APMNShape');
 
       // then
       expect(type).to.exist;
@@ -36,7 +36,7 @@ describe('bpmn-moddle', function() {
       expect(
         descriptor.propertiesByName['di:modelElement']
       ).to.eql(
-        descriptor.propertiesByName['bpmndi:bpmnElement']
+        descriptor.propertiesByName['apmndi:apmnElement']
       );
     });
 
@@ -46,67 +46,67 @@ describe('bpmn-moddle', function() {
   describe('creation', function() {
 
     it('should create SequenceFlow', function() {
-      var sequenceFlow = moddle.create('bpmn:SequenceFlow');
+      var sequenceFlow = moddle.create('apmn:SequenceFlow');
 
-      expect(sequenceFlow.$type).to.eql('bpmn:SequenceFlow');
+      expect(sequenceFlow.$type).to.eql('apmn:SequenceFlow');
     });
 
 
     it('should create Definitions', function() {
-      var definitions = moddle.create('bpmn:Definitions');
+      var definitions = moddle.create('apmn:Definitions');
 
-      expect(definitions.$type).to.eql('bpmn:Definitions');
+      expect(definitions.$type).to.eql('apmn:Definitions');
     });
 
 
     it('should create Process', function() {
-      var process = moddle.create('bpmn:Process');
+      var process = moddle.create('apmn:Process');
 
-      expect(process.$type).to.eql('bpmn:Process');
-      expect(process.$instanceOf('bpmn:FlowElementsContainer')).to.be.true;
+      expect(process.$type).to.eql('apmn:Process');
+      expect(process.$instanceOf('apmn:FlowElementsContainer')).to.be.true;
     });
 
 
     it('should create SubProcess', function() {
-      var subProcess = moddle.create('bpmn:SubProcess');
+      var subProcess = moddle.create('apmn:SubProcess');
 
-      expect(subProcess.$type).to.eql('bpmn:SubProcess');
-      expect(subProcess.$instanceOf('bpmn:InteractionNode')).to.be.true;
+      expect(subProcess.$type).to.eql('apmn:SubProcess');
+      expect(subProcess.$instanceOf('apmn:InteractionNode')).to.be.true;
     });
 
 
     describe('defaults', function() {
 
       it('should init Gateway', function() {
-        var gateway = moddle.create('bpmn:Gateway');
+        var gateway = moddle.create('apmn:Gateway');
 
         expect(gateway.gatewayDirection).to.eql('Unspecified');
       });
 
 
-      it('should init BPMNShape', function() {
-        var bpmnEdge = moddle.create('bpmndi:BPMNEdge');
+      it('should init APMNShape', function() {
+        var apmnEdge = moddle.create('apmndi:APMNEdge');
 
-        expect(bpmnEdge.messageVisibleKind).to.eql('initiating');
+        expect(apmnEdge.messageVisibleKind).to.eql('initiating');
       });
 
 
       it('should init EventBasedGateway', function() {
-        var gateway = moddle.create('bpmn:EventBasedGateway');
+        var gateway = moddle.create('apmn:EventBasedGateway');
 
         expect(gateway.eventGatewayType).to.eql('Exclusive');
       });
 
 
       it('should init CatchEvent', function() {
-        var event = moddle.create('bpmn:CatchEvent');
+        var event = moddle.create('apmn:CatchEvent');
 
         expect(event.parallelMultiple).to.eql(false);
       });
 
 
       it('should init ParticipantMultiplicity', function() {
-        var participantMultiplicity = moddle.create('bpmn:ParticipantMultiplicity');
+        var participantMultiplicity = moddle.create('apmn:ParticipantMultiplicity');
 
         expect(participantMultiplicity.minimum).to.eql(0);
         expect(participantMultiplicity.maximum).to.eql(1);
@@ -114,7 +114,7 @@ describe('bpmn-moddle', function() {
 
 
       it('should init Activity', function() {
-        var activity = moddle.create('bpmn:Activity');
+        var activity = moddle.create('apmn:Activity');
 
         expect(activity.startQuantity).to.eql(1);
         expect(activity.completionQuantity).to.eql(1);
@@ -132,7 +132,7 @@ describe('bpmn-moddle', function() {
       it('should set attribute', function() {
 
         // given
-        var process = moddle.create('bpmn:Process');
+        var process = moddle.create('apmn:Process');
 
         // assume
         expect(process.get('isExecutable')).not.to.exist;
@@ -142,7 +142,7 @@ describe('bpmn-moddle', function() {
 
         // then
         expect(process).to.jsonEqual({
-          $type: 'bpmn:Process',
+          $type: 'apmn:Process',
           isExecutable: true
         });
       });
@@ -151,14 +151,14 @@ describe('bpmn-moddle', function() {
       it('should set attribute (ns)', function() {
 
         // given
-        var process = moddle.create('bpmn:Process');
+        var process = moddle.create('apmn:Process');
 
         // when
-        process.set('bpmn:isExecutable', true);
+        process.set('apmn:isExecutable', true);
 
         // then
         expect(process).to.jsonEqual({
-          $type: 'bpmn:Process',
+          $type: 'apmn:Process',
           isExecutable: true
         });
       });
@@ -167,14 +167,14 @@ describe('bpmn-moddle', function() {
       it('should set id attribute', function() {
 
         // given
-        var definitions = moddle.create('bpmn:Definitions');
+        var definitions = moddle.create('apmn:Definitions');
 
         // when
         definitions.set('id', 10);
 
         // then
         expect(definitions).to.jsonEqual({
-          $type: 'bpmn:Definitions',
+          $type: 'apmn:Definitions',
           id: 10
         });
       });
@@ -186,11 +186,11 @@ describe('bpmn-moddle', function() {
       it('should create simple hierarchy', function() {
 
         // given
-        var definitions = moddle.create('bpmn:Definitions');
-        var rootElements = definitions.get('bpmn:rootElements');
+        var definitions = moddle.create('apmn:Definitions');
+        var rootElements = definitions.get('apmn:rootElements');
 
-        var process = moddle.create('bpmn:Process');
-        var collaboration = moddle.create('bpmn:Collaboration');
+        var process = moddle.create('apmn:Process');
+        var collaboration = moddle.create('apmn:Collaboration');
 
         // when
         rootElements.push(collaboration);
@@ -201,10 +201,10 @@ describe('bpmn-moddle', function() {
         expect(definitions.rootElements).to.eql([ collaboration, process ]);
 
         expect(definitions).to.jsonEqual({
-          $type: 'bpmn:Definitions',
+          $type: 'apmn:Definitions',
           rootElements: [
-            { $type: 'bpmn:Collaboration' },
-            { $type: 'bpmn:Process' }
+            { $type: 'apmn:Collaboration' },
+            { $type: 'apmn:Process' }
           ]
         });
       });

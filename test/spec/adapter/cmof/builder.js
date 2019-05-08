@@ -8,7 +8,7 @@ import {
 
 import fs from 'fs';
 
-import CmofParser from 'cmof-parser';
+import CmofParser from 'apmn-parser';
 
 
 export default function Builder() {

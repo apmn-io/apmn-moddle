@@ -1,6 +1,6 @@
 {
   "name": "DI",
-  "uri": "http://www.omg.org/spec/DD/20100524/DI",
+  "uri": "http://apmn.io/spec/DD/DI",
   "types": [
     {
       "name": "DiagramElement",

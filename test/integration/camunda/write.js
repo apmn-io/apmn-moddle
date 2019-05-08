@@ -12,7 +12,7 @@ import {
 import camundaPackage from '../../fixtures/json/model/camunda';
 
 
-describe('bpmn-moddle - integration', function() {
+describe('apmn-moddle - integration', function() {
 
   describe('camunda extension', function() {
 
@@ -38,13 +38,13 @@ describe('bpmn-moddle - integration', function() {
         it('ServiceTaskLike', function(done) {
 
           // given
-          var serviceTask = moddle.create('bpmn:ServiceTask', { javaDelegate: 'FOO' });
+          var serviceTask = moddle.create('apmn:ServiceTask', { javaDelegate: 'FOO' });
 
           // assume
           expect(serviceTask.$instanceOf('camunda:ServiceTaskLike')).to.be.true;
 
           var expectedXML =
-          '<bpmn:serviceTask xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" ' +
+          '<apmn:serviceTask xmlns:apmn="http://apmn.io/spec/APMN/MODEL" ' +
                             'xmlns:camunda="http://activiti.org/bpmn" ' +
                             'camunda:javaDelegate="FOO" />';
 

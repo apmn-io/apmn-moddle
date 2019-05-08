@@ -13,7 +13,7 @@ import {
 } from 'min-dash';
 
 
-describe('bpmn-moddle - integration', function() {
+describe('apmn-moddle - integration', function() {
 
   describe('drools:import element', function() {
 
@@ -44,14 +44,14 @@ describe('bpmn-moddle - integration', function() {
     it('should import', function(done) {
 
       // when
-      fromFile('extension/drools.part.bpmn', 'bpmn:Process', function(err, result) {
+      fromFile('extension/drools.part.bpmn', 'apmn:Process', function(err, result) {
 
         var expected = {
-          $type: 'bpmn:Process',
+          $type: 'apmn:Process',
           id: 'Evaluation',
           isExecutable: false,
           extensionElements: {
-            $type: 'bpmn:ExtensionElements',
+            $type: 'apmn:ExtensionElements',
             values: [
               {
                 $type: 'drools:Import',
@@ -77,8 +77,8 @@ describe('bpmn-moddle - integration', function() {
         name: 'com.example.model.User'
       });
 
-      var processElement = moddle.create('bpmn:Process', {
-        extensionElements: moddle.create('bpmn:ExtensionElements', {
+      var processElement = moddle.create('apmn:Process', {
+        extensionElements: moddle.create('apmn:ExtensionElements', {
           values: [
             importElement
           ]
@@ -86,12 +86,12 @@ describe('bpmn-moddle - integration', function() {
       });
 
       var expectedXML =
-        '<bpmn:process xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" ' +
+        '<apmn:process xmlns:apmn="http://apmn.io/spec/APMN/MODEL" ' +
                       'xmlns:drools="http://www.jboss.org/drools">' +
-          '<bpmn:extensionElements>' +
+          '<apmn:extensionElements>' +
             '<drools:import name="com.example.model.User" />' +
-          '</bpmn:extensionElements>' +
-        '</bpmn:process>';
+          '</apmn:extensionElements>' +
+        '</apmn:process>';
 
       // when
       write(processElement, function(err, result) {

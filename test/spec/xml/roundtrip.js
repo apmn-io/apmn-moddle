@@ -12,7 +12,7 @@ import {
 } from '../../xml-helper';
 
 
-describe('bpmn-moddle - roundtrip', function() {
+describe('apmn-moddle - roundtrip', function() {
 
   var moddle = createModdle();
 
@@ -21,17 +21,17 @@ describe('bpmn-moddle - roundtrip', function() {
   }
 
 
-  describe('should serialize valid BPMN 2.0 xml after read', function() {
+  describe('should serialize valid APMN xml after read', function() {
 
     this.timeout(15000);
 
 
-    it('home-made bpmn model', function(done) {
+    it('home-made apmn model', function(done) {
 
-      var definitions = moddle.create('bpmn:Definitions', { targetNamespace: 'http://foo' });
+      var definitions = moddle.create('apmn:Definitions', { targetNamespace: 'http://foo' });
 
-      var processElement = moddle.create('bpmn:Process');
-      var serviceTask = moddle.create('bpmn:ServiceTask', { name: 'MyService Task' });
+      var processElement = moddle.create('apmn:Process');
+      var serviceTask = moddle.create('apmn:ServiceTask', { name: 'MyService Task' });
 
       processElement.get('flowElements').push(serviceTask);
       definitions.get('rootElements').push(processElement);
@@ -47,21 +47,21 @@ describe('bpmn-moddle - roundtrip', function() {
 
     it('obscure ids model', function(done) {
 
-      var definitions = moddle.create('bpmn:Definitions', {
+      var definitions = moddle.create('apmn:Definitions', {
         'xmlns:foo': 'http://foo-ns',
         targetNamespace: 'http://foo',
         rootElements: [
-          moddle.create('bpmn:Message', { id: 'foo_bar' }),
-          moddle.create('bpmn:Message', { id: 'foo-bar' }),
-          moddle.create('bpmn:Message', { id: 'foo1bar' }),
-          moddle.create('bpmn:Message', { id: 'Foo1bar' }),
-          moddle.create('bpmn:Message', { id: '_foo_bar' }),
-          moddle.create('bpmn:Message', { id: '_foo-bar' }),
-          moddle.create('bpmn:Message', { id: '_11' })
+          moddle.create('apmn:Message', { id: 'foo_bar' }),
+          moddle.create('apmn:Message', { id: 'foo-bar' }),
+          moddle.create('apmn:Message', { id: 'foo1bar' }),
+          moddle.create('apmn:Message', { id: 'Foo1bar' }),
+          moddle.create('apmn:Message', { id: '_foo_bar' }),
+          moddle.create('apmn:Message', { id: '_foo-bar' }),
+          moddle.create('apmn:Message', { id: '_11' })
           // invalid
-          // moddle.create('bpmn:Message', { id: '-foo-bar' }),
-          // moddle.create('bpmn:Message', { id: 'foo:_foo_bar' }),
-          // moddle.create('bpmn:Message', { id: '1foo_bar' })
+          // moddle.create('apmn:Message', { id: '-foo-bar' }),
+          // moddle.create('apmn:Message', { id: 'foo:_foo_bar' }),
+          // moddle.create('apmn:Message', { id: '1foo_bar' })
         ]
       });
 
@@ -77,25 +77,25 @@ describe('bpmn-moddle - roundtrip', function() {
     it('ioSpecification', function(done) {
 
       // given
-      var definitions = moddle.create('bpmn:Definitions', { targetNamespace: 'http://foo' });
+      var definitions = moddle.create('apmn:Definitions', { targetNamespace: 'http://foo' });
 
-      var processElement = moddle.create('bpmn:Process');
+      var processElement = moddle.create('apmn:Process');
 
-      var dataInput = moddle.create('bpmn:DataInput', { id: 'DataInput_FOO' });
+      var dataInput = moddle.create('apmn:DataInput', { id: 'DataInput_FOO' });
 
-      var inputSet = moddle.create('bpmn:InputSet', {
+      var inputSet = moddle.create('apmn:InputSet', {
         dataInputRefs: [ dataInput ]
       });
 
-      var outputSet = moddle.create('bpmn:OutputSet');
+      var outputSet = moddle.create('apmn:OutputSet');
 
-      var ioSpecification = moddle.create('bpmn:InputOutputSpecification', {
+      var ioSpecification = moddle.create('apmn:InputOutputSpecification', {
         inputSets: [ inputSet ],
         outputSets: [ outputSet ],
         dataInputs: [ dataInput ]
       });
 
-      var serviceTask = moddle.create('bpmn:ServiceTask', {
+      var serviceTask = moddle.create('apmn:ServiceTask', {
         name: 'MyService Task',
         ioSpecification: ioSpecification
       });
@@ -115,16 +115,16 @@ describe('bpmn-moddle - roundtrip', function() {
     it('properties', function(done) {
 
       // given
-      var definitions = moddle.create('bpmn:Definitions', { targetNamespace: 'http://foo' });
+      var definitions = moddle.create('apmn:Definitions', { targetNamespace: 'http://foo' });
 
-      var processElement = moddle.create('bpmn:Process');
+      var processElement = moddle.create('apmn:Process');
 
-      var property = moddle.create('bpmn:Property', {
+      var property = moddle.create('apmn:Property', {
         id: 'Property_112',
         name: '__targetRef_placeholder'
       });
 
-      var serviceTask = moddle.create('bpmn:ServiceTask', {
+      var serviceTask = moddle.create('apmn:ServiceTask', {
         name: 'MyService Task',
         properties: [ property ]
       });
@@ -161,7 +161,7 @@ describe('bpmn-moddle - roundtrip', function() {
     it('extension attributes on expression', function(done) {
 
       // given
-      fromFilePart(moddle, 'test/fixtures/bpmn/expression-extension.part.bpmn', 'bpmn:ResourceAssignmentExpression', function(err, result, context) {
+      fromFilePart(moddle, 'test/fixtures/bpmn/expression-extension.part.bpmn', 'apmn:ResourceAssignmentExpression', function(err, result, context) {
 
         if (err) {
           return done(err);
@@ -219,7 +219,7 @@ describe('bpmn-moddle - roundtrip', function() {
 
           // we are serializing xsi:type, even though
           // it is the default
-          expect(xml).not.to.contain('xsi:type="bpmn:tExpression');
+          expect(xml).not.to.contain('xsi:type="apmn:tExpression');
 
           validate(err, xml, done);
         });
